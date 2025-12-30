@@ -46,7 +46,7 @@ class NfcManagerPlugin: FlutterPlugin, ActivityAware, HostApiPigeon, BroadcastRe
   }
 
   override fun onAttachedToActivity(binding: ActivityPluginBinding) {
-    activity = binding.activity ?? return 
+    activity = binding.activity ?: return 
 
     val filter = IntentFilter().apply { 
       addAction(NfcAdapter.ACTION_ADAPTER_STATE_CHANGED)
